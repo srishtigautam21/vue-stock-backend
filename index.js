@@ -3,7 +3,7 @@ require("dotenv").config();
 const app = express();
 const cors = require("cors");
 
-const port = process.env.VUE_APP_PORT || 3000;
+const PORT = process.env.VUE_APP_PORT || 3000;
 
 app.use(express.json());
 if (process.env.NODE_ENV !== "production") {
@@ -52,6 +52,6 @@ app.use(function (req, res, next) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.listen(port, () => {
-  console.log(`Server running on ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
 });
