@@ -2,8 +2,8 @@ const express = require("express");
 require("dotenv").config();
 const app = express();
 const cors = require("cors");
-
-const PORT = process.env.VUE_APP_PORT || 3000;
+// VUE_APP_
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 if (process.env.NODE_ENV !== "production") {
